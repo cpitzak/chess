@@ -1,0 +1,30 @@
+Piece
+	- Piece_color color
+	- Piece_type type
+	- int row, col
+	- Vector<Move> get_possible_moves()
+	- Piece_color get_color()
+
+Enum Piece_Color
+	- White, Black
+	
+Enum Piece_type
+	- King, Queen, Rook, Bishop, Knight, Pawn
+	
+Board
+	- Piece[][] board
+	- private init()
+	- void reset()
+	
+Chess_game
+	- void play()
+	
+Chess_utils
+	- bool is_valid_move(Move m)
+	- bool is_draw(Board b)
+	- bool is_stalemate(Board b)
+	- Piece in_check(Board b)
+	- Piece in_checkmate(Board b)
+	- private is_50_draw_rule(Board b)
+	
+	
